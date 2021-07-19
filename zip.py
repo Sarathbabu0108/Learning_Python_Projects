@@ -6,5 +6,15 @@ print(zipped)
 
 # unzipping
 
-unzipped = list( zip(*zipped))
+unzipped = list(zip(*zipped))
 print(unzipped)
+
+items = ['apple', 'banana', 'orange']
+counts = [3, 6, 4]
+prices = [0.99, 0.25, 0.50]
+sentances = []
+for (item, count, price) in zip(items, counts, prices):
+    item, count, price = str(item), str(count), str(price)
+    sentence = 'I bought ' + count + '  ' + item + 's at ' + price + 'rupees.'
+    sentances.append(sentence)
+print(sentances)
